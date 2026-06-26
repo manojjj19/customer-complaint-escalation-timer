@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark Mode Core Theme overrides */
+.dark body {
+  background-color: #0b1329 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Sleek global dark support for inputs, textareas, selects */
+.dark input, 
+.dark select, 
+.dark textarea {
+  background-color: #1a233b !important;
+  color: #f8fafc !important;
+  border-color: #2e3e5c !important;
+}
+.dark input:focus, 
+.dark select:focus, 
+.dark textarea:focus {
+  border-color: #3b82f6 !important;
+  outline: none;
+}
+.dark input::placeholder, 
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Keyframes for pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.03); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+/* Custom animation for page refresh blink */
+@keyframes pageBlink {
+  0% { opacity: 1; }
+  25% { opacity: 0.15; }
+  75% { opacity: 0.15; }
+  100% { opacity: 1; }
+}
+
+.animate-page-blink {
+  animation: pageBlink 0.5s ease-in-out;
+}
+
+

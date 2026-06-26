@@ -1,0 +1,166 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "name": "Ananya Sharma",
+      "email": "admin@manivtha.com",
+      "role": "admin",
+      "password": "$2b$10$zARzzT46XBroG8EnVZTdh.56c36Xk/Tl3vAKrhS2/.Vkxn8eHjrmC"
+    },
+    {
+      "id": "u-2",
+      "name": "Vikram Kulkarni",
+      "email": "manager@manivtha.com",
+      "role": "manager",
+      "password": "$2b$10$zARzzT46XBroG8EnVZTdh.ht.Hd4zgr.GNXtIVdoxJswWDc1K9uHq"
+    },
+    {
+      "id": "u-3",
+      "name": "Rahul Deshmukh",
+      "email": "rahul@manivtha.com",
+      "role": "staff",
+      "password": "$2b$10$zARzzT46XBroG8EnVZTdh.3HWyhkehLmZ2/dm6EqKkj0QcgFMj63a"
+    },
+    {
+      "id": "u-4",
+      "name": "Priya Nair",
+      "email": "priya@manivtha.com",
+      "role": "staff",
+      "password": "$2b$10$zARzzT46XBroG8EnVZTdh.3HWyhkehLmZ2/dm6EqKkj0QcgFMj63a"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "c-1",
+      "complaintId": "MVT-1001",
+      "customerName": "Rohan Gupta",
+      "phone": "+91 98765 43210",
+      "email": "rohan.g@gmail.com",
+      "category": "Refund & Cancellation",
+      "description": "Booked a Kerala honeymoon package (MVT-KRL-2026), but cancelled it 3 days in advance. Standard refund was initiated but has not credited to my bank account for 7 business days now.",
+      "priority": "high",
+      "status": "open",
+      "assignedStaff": "u-3",
+      "createdAt": "2026-06-26T12:52:19.414Z",
+      "updatedAt": "2026-06-26T12:52:19.414Z",
+      "slaDeadline": "2026-06-26T16:52:19.414Z"
+    },
+    {
+      "id": "c-2",
+      "complaintId": "MVT-1002",
+      "customerName": "Sara Khan",
+      "phone": "+91 91234 56789",
+      "email": "sara.khan@yahoo.com",
+      "category": "Booking & Reservation",
+      "description": "Flight booking failed on the website but money was deducted. I have a connecting flight from Mumbai tomorrow morning and have not received the booking confirmation or PNR number.",
+      "priority": "critical",
+      "status": "escalated",
+      "assignedStaff": "u-4",
+      "createdAt": "2026-06-26T09:58:19.414Z",
+      "updatedAt": "2026-06-26T13:58:19.503Z",
+      "slaDeadline": "2026-06-26T13:58:19.414Z",
+      "escalatedAt": "2026-06-26T13:58:19.503Z"
+    },
+    {
+      "id": "c-3",
+      "complaintId": "MVT-1003",
+      "customerName": "Donald Fernandes",
+      "phone": "+91 93456 78901",
+      "email": "donald.f@outlook.com",
+      "category": "Cab Service Delay",
+      "description": "Cab driver defaulted on pickup for airport transfer in Pune. Had to book a local cab at double price to avoid missing the flight.",
+      "priority": "medium",
+      "status": "resolved",
+      "assignedStaff": "u-3",
+      "createdAt": "2026-06-26T01:52:19.414Z",
+      "updatedAt": "2026-06-26T13:52:19.414Z",
+      "resolvedAt": "2026-06-26T13:52:19.414Z",
+      "slaDeadline": "2026-06-26T05:52:19.414Z"
+    },
+    {
+      "id": "c-4",
+      "complaintId": "MVT-1004",
+      "customerName": "Amit Patel",
+      "phone": "+91 99988 77766",
+      "email": "amit.patel@gmail.com",
+      "category": "Hotel Accommodation Issue",
+      "description": "Arrived at resort in Ooty booked through Manivtha Tours, but hotel says rooms are overbooked and no booking matches my voucher code. Waiting at the lobby with family.",
+      "priority": "critical",
+      "status": "escalated",
+      "assignedStaff": "u-4",
+      "createdAt": "2026-06-26T03:52:19.414Z",
+      "updatedAt": "2026-06-26T05:52:19.414Z",
+      "slaDeadline": "2026-06-26T07:52:19.414Z",
+      "escalatedAt": "2026-06-26T05:52:19.414Z"
+    }
+  ],
+  "escalations": [
+    {
+      "id": "e-1",
+      "complaintId": "MVT-1004",
+      "escalationTime": "2026-06-26T05:52:19.414Z",
+      "escalationReason": "SLA SLA countdown exceeded 4-hour limit without resolution. Automatic system escalation."
+    },
+    {
+      "id": "e-774004",
+      "complaintId": "MVT-1002",
+      "escalationTime": "2026-06-26T13:58:19.503Z",
+      "escalationReason": "Automated SLA Violation: Complaint unresolved within 4 hours."
+    }
+  ],
+  "notes": [
+    {
+      "id": "n-1",
+      "complaintId": "MVT-1003",
+      "userId": "u-3",
+      "userName": "Rahul Deshmukh",
+      "role": "staff",
+      "note": "Apologized to customer. Initiated reimbursement process for additional cab expenses of ₹1200.",
+      "createdAt": "2026-06-26T11:52:19.414Z"
+    },
+    {
+      "id": "n-2",
+      "complaintId": "MVT-1003",
+      "userId": "u-3",
+      "userName": "Rahul Deshmukh",
+      "role": "staff",
+      "note": "Refund processed and receipt shared. Customer confirmed receipt. Resolving complaint.",
+      "createdAt": "2026-06-26T13:52:19.414Z"
+    },
+    {
+      "id": "n-3",
+      "complaintId": "MVT-1004",
+      "userId": "u-4",
+      "userName": "Priya Nair",
+      "role": "staff",
+      "note": "Contacted Ooty resort representative. Attempting to match reservation codes. Waiting for manager intervention.",
+      "createdAt": "2026-06-26T04:52:19.414Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "nt-1",
+      "userId": "u-4",
+      "message": "New high priority complaint MVT-1002 assigned to you.",
+      "status": "unread",
+      "createdAt": "2026-06-26T09:58:19.414Z",
+      "complaintId": "MVT-1002"
+    },
+    {
+      "id": "nt-2",
+      "userId": "all",
+      "message": "Urgent SLA Alert: Complaint MVT-1004 has exceeded resolution timer and is escalated to Managers.",
+      "status": "unread",
+      "createdAt": "2026-06-26T05:52:19.414Z",
+      "complaintId": "MVT-1004"
+    },
+    {
+      "id": "nt-877056",
+      "userId": "all",
+      "message": "🚨 SLA CRITICAL: Complaint MVT-1002 (Sara Khan) has breached the 4-hour SLA timer and is escalated!",
+      "status": "unread",
+      "createdAt": "2026-06-26T13:58:19.503Z",
+      "complaintId": "MVT-1002"
+    }
+  ]
+}

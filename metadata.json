@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Customer Complaint Escalation \u0026 Resolution Timer",
+  "description": "Enterprise-grade complaint tracking and 4-hour SLA auto-escalation management system for Manivtha Tours \u0026 Travels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
