@@ -34,7 +34,7 @@ export default function LoginView({ onLoginSuccess }: LoginViewProps) {
     }
 
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch("https://customer-complaint-escalation-timer.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: activeEmail, password: activePass })
